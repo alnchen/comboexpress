@@ -1,7 +1,81 @@
+body {
+  background-color: #fffef9;
+  font-family: 'Neuton', serif;
+  font-size: 24px;
+}
+
 .App {
+  /* background-color: #fffef9; */
+  /* background-color: black; */
+}
+
+.mobile-header {
+  color: brown;
   text-align: center;
 }
 
+.mobile-contact-trigger {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  background-color: #F77262;
+  color: white;
+  border-radius: 100px;
+  text-align: center;
+  -webkit-box-shadow: 0 12px 6px -6px #a5a5a5;
+  -moz-box-shadow: 0 12px 6px -6px #a5a5a5;
+  box-shadow: 0 12px 6px -6px #a5a5a5;
+}
+
+.mobile-contract-trigger-text {
+  padding-top: 9px;
+}
+
+.mobile-popout {
+  background-color: #fffef9;
+}
+
+.mobile-popout-heading {
+  font-size: 4vh;
+  text-align: center;
+}
+
+.hori-line {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.popout-image {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* .party-order-message {
+  padding-top: 50px;
+} */
+
+.mobile-popout-number {
+  padding-top: 50px;
+  font-size: 4vh;
+  text-align: center;
+}
+
+.popout-address {
+  font-size: 3vh;
+  text-align: center;
+  padding: 3vh 0px;
+}
+
+.party-order-message {
+  font-size: 3vh;
+}
+
+/* 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -30,4 +104,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
