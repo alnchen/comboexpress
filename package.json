@@ -19,7 +19,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://www.combo-express.com",
+  "homepage": "www.combo-express.com",
   "eslintConfig": {
     "extends": "react-app"
   },
