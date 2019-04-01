@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
 import HeaderMobile from './components/mobile/header-mobile';
+import PartyOrdersMobile from './components/mobile/party-orders-mobile';
 import PhotoCarousel from './components/photo-carousel';
-// import Modal from 'react-modal';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
 import './App.css';
@@ -73,7 +73,12 @@ class App extends Component {
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
           <HeaderMobile />
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" /></div>
           <PhotoCarousel />
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" /></div>
+          <PartyOrdersMobile />
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" /></div>
+          <div className="mobile-section-labels">About Us</div>
           {this.renderMobileContactDialog()}
         </MediaQuery>
       </div>
