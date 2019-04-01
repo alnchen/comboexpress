@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
 import HeaderMobile from './components/mobile/header-mobile';
-import Modal from 'react-modal';
+import PhotoCarousel from './components/photo-carousel';
+// import Modal from 'react-modal';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
 import './App.css';
@@ -72,6 +73,7 @@ class App extends Component {
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
           <HeaderMobile />
+          <PhotoCarousel />
           {this.renderMobileContactDialog()}
         </MediaQuery>
       </div>

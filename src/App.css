@@ -1,7 +1,8 @@
 body {
   background-color: #fffef9;
-  font-family: 'Neuton', serif;
-  font-size: 24px;
+  /* font-family: 'Neuton', serif; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
 }
 
 .App {
@@ -30,7 +31,7 @@ body {
 }
 
 .mobile-contract-trigger-text {
-  padding-top: 9px;
+  padding-top: 13px;
 }
 
 .mobile-popout {
@@ -38,7 +39,7 @@ body {
 }
 
 .mobile-popout-heading {
-  font-size: 4vh;
+  font-size: 3vh;
   text-align: center;
 }
 
@@ -60,8 +61,8 @@ body {
 } */
 
 .mobile-popout-number {
-  padding-top: 50px;
-  font-size: 4vh;
+  padding-top: 35px;
+  font-size: 3vh;
   text-align: center;
 }
 
@@ -72,7 +73,33 @@ body {
 }
 
 .party-order-message {
-  font-size: 3vh;
+  font-size: 2.5vh;
+}
+
+#carousel-caption {
+  /* background: rgba(51, 51, 51, 0.7);  */
+  background: none;
+}
+
+.carousel-caption-text {
+  /* background-color:  */
+  background: rgba(51, 51, 51, 0.8);
+  width: max-content;
+  margin: 0 auto;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.carousel .control-dots {
+  padding-left: 0px;
+}
+
+.carousel .slide .legend {
+  bottom: 15px;
+  /* top: 10px; */
+  /* width: max-content; */
+  /* margin: 0 auto; */
+  transition: none;
 }
 
 /* 
