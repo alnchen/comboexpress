@@ -19,7 +19,7 @@ body {
   display: flex;
   position: fixed;
   top: 0px;
-  z-index: 1;
+  z-index: 999;
   background-color: #efece8;
   height: 125px;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .mobile-popout-overlay {
-  z-index: 10;
+  z-index: 1000;
 }
 
 
