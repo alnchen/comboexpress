@@ -3,6 +3,7 @@ import MediaQuery from 'react-responsive';
 import HeaderMobile from './components/mobile/header-mobile';
 import PartyOrdersMobile from './components/mobile/party-orders-mobile';
 import PhotoCarousel from './components/photo-carousel';
+import AboutUs from './components/about-us';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
 import './App.css';
@@ -18,9 +19,9 @@ class App extends Component {
 
   openMobileMaps() {
     if /* if we're on iOS, open in Apple Maps */
-      ((navigator.platform.indexOf("iPhone") != -1) || 
-       (navigator.platform.indexOf("iPad") != -1) || 
-       (navigator.platform.indexOf("iPod") != -1))
+      ((navigator.platform.indexOf("iPhone") !== -1) || 
+       (navigator.platform.indexOf("iPad") !== -1) || 
+       (navigator.platform.indexOf("iPod") !== -1))
       window.open("maps://maps.google.com/maps/dir/?daddr=38.1046864,-122.2159803&amp;ll=");
     else /* else use Google */
       window.open("https://maps.google.com/maps/dir/?daddr=38.1046864,-122.2159803&amp;ll=");
@@ -41,7 +42,7 @@ class App extends Component {
         )}
         <SlidingPane
           className='mobile-popout'
-          overlayClassName='mobile-popout'
+          overlayClassName='mobile-popout-overlay'
           isOpen={ this.state.isBottomDialogOpen }
           from="right"
           onRequestClose={ () => {
@@ -50,15 +51,17 @@ class App extends Component {
           <div className="mobile-popout">
             <div className="mobile-popout-heading">Contact Us</div>
             <hr className="hori-line"/>
-            <img  className="popout-image" src="https://res.cloudinary.com/ac31624/image/upload/v1553999152/combo_wkuqyh_ggwroq.jpg" />
+            <img  alt="combo restaurant front" className="popout-image" src="https://res.cloudinary.com/ac31624/image/upload/v1553999152/combo_wkuqyh_ggwroq.jpg" />
             <div className="party-order-message">We are located at:</div>
-            <address className="popout-address">
-              42 Springstowne Ctr<br/>
-              Vallejo, CA 94591<br/>
-              <a href="_blank" onClick={this.openMobileMaps}>Click Here To Navigate</a>
-            </address>
+            <div className="popout-address">
+              <address>
+                42 Springstowne Ctr<br/>
+                Vallejo, CA 94591<br/>
+              </address>
+              <div className="popout-maps-link" onClick={this.openMobileMaps}>Open in maps <span role="img" aria-label="emoji maps">📲</span></div>
+            </div>
             <div className="party-order-message">Please call the number below to place an order, thank you!</div>
-            <div className="mobile-popout-number"><span role="img">📞 : </span><a href="tel:707-648-1066">707-648-1066</a></div>
+            <div className="mobile-popout-number"><span role="img"><span role="img" aria-label="emoji phone">📞</span> : </span><a href="tel:707-648-1066">707-648-1066</a></div>
           </div>
         </SlidingPane>
       </>
@@ -69,16 +72,18 @@ class App extends Component {
     return (
       <div className="App">
         <MediaQuery minDeviceWidth={1224}>
-          desktop in progress
+          <div className="mobile-section-labels">Desktop site will be coming soon!</div>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
           <HeaderMobile />
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" /></div>
+          <div className="mobile-divider top-padding-for-header"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
           <PhotoCarousel />
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" /></div>
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
           <PartyOrdersMobile />
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" /></div>
-          <div className="mobile-section-labels">About Us</div>
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
+          <div className="mobile-section-labels">
+            <AboutUs />
+          </div>          
           {this.renderMobileContactDialog()}
         </MediaQuery>
       </div>

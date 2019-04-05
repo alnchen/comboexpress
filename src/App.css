@@ -4,6 +4,7 @@ body {
   /* font-family: 'Neuton', serif; */
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
+  padding-bottom: 110px;
 }
 
 .App {
@@ -16,10 +17,19 @@ body {
   text-align: center;
   padding: 10px 3vw 0px 3vw;
   display: flex;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  background-color: #efece8;
+  height: 125px;
+}
+
+.top-padding-for-header {
+  margin-top: 125px;
 }
 
 .mobile-contact-trigger {
-  position: absolute;
+  position: fixed;
   bottom: 25px;
   right: 25px;
   width: 80px;
@@ -41,6 +51,11 @@ body {
   /* background-color: #fffef9; */
   background-color: #efece8;
 }
+
+.mobile-popout-overlay {
+  z-index: 10;
+}
+
 
 .mobile-popout-heading {
   font-size: 3vh;
@@ -83,6 +98,7 @@ body {
 #carousel-caption {
   /* background: rgba(51, 51, 51, 0.7);  */
   background: none;
+  margin-bottom: 10px;
 }
 
 .carousel-caption-text {
@@ -148,5 +164,17 @@ body {
 }
 
 .mobile-section-labels {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+
+.popout-maps-link {
+  color: blue;
+}
+
+.about-us {
+  padding: 0px 40px;
+  font-size: 20px;
   text-align: center;
 }
