@@ -4,7 +4,7 @@ export default class HeaderMobile extends Component {
   render() {
     return (
       <div className="mobile-header">
-        <div className="mobile-logo-container"><img className="mobile-logo" alt="combo logo" src="https://res.cloudinary.com/ac31624/image/upload/v1554084288/ComboExpress_Logo_xcakhb.png"/></div>
+        <div className="mobile-logo-container"><img className="mobile-logo" alt="combo logo" src="https://res.cloudinary.com/ac31624/image/upload/v1554084288/combo/ComboExpress_Logo_xcakhb.png"/></div>
         <div className="mobile-header-address">
           <div className="">
             42 Springstowne Ctr<br/>

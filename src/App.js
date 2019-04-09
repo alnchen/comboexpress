@@ -49,9 +49,7 @@ class App extends Component {
             this.setState({ isBottomDialogOpen: false });
           }}>
           <div className="mobile-popout">
-            <div className="mobile-popout-heading">Contact Us</div>
-            <hr className="hori-line"/>
-            <img  alt="combo restaurant front" className="popout-image" src="https://res.cloudinary.com/ac31624/image/upload/v1553999152/combo_wkuqyh_ggwroq.jpg" />
+            <img  alt="combo restaurant front" className="popout-image" src="http://res.cloudinary.com/ac31624/image/upload/c_scale,w_832/v1554845685/combo/combo_front_hd6mi2.jpg" />
             <div className="party-order-message">We are located at:</div>
             <div className="popout-address">
               <address>
@@ -76,14 +74,15 @@ class App extends Component {
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
           <HeaderMobile />
-          <div className="mobile-divider top-padding-for-header"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
+          <div className="mobile-divider top-padding-for-header"></div>
           <PhotoCarousel />
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
-          <PartyOrdersMobile />
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
           <div className="mobile-section-labels">
             <AboutUs />
-          </div>          
+          </div>   
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
+          <PartyOrdersMobile />
+          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>     
           {this.renderMobileContactDialog()}
         </MediaQuery>
       </div>
