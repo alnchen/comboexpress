@@ -20,10 +20,6 @@ class NavBar extends Component {
     // console.log(event);
   }
 
-  componentDidUpdate() {
-    console.log("hi");
-  }
-
   render() {
     return (
       <Tabs>
