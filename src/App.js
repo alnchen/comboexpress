@@ -78,10 +78,9 @@ class App extends Component {
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
           <HeaderMobile />
-          <div className="mobile-divider top-padding-for-header"></div>
           <PhotoCarousel />
           <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
-          <div className="mobile-section-labels">
+          <div className="">
             <AboutUs />
           </div>   
           <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
