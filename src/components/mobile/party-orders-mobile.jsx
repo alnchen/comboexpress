@@ -33,6 +33,7 @@ export default class PartyOrdersMobile extends Component {
         thumbnail: 'https://res.cloudinary.com/ac31624/image/upload/v1554790455/combo/party_spareribs_h7cyew.jpg'
       }
     ];
+// image gallery: https://www.npmjs.com/package/react-image-gallery
 
     return (
       <>

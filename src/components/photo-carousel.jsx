@@ -29,6 +29,7 @@ export default class PhotoCarousel extends Component {
         thumbnail: 'https://res.cloudinary.com/ac31624/image/upload/v1554790458/combo/party_salt_pepper_shrimp_z37bxt.jpg'
       },
     ];
+// image gallery: https://www.npmjs.com/package/react-image-gallery
 
     return (
       <ImageGallery 
