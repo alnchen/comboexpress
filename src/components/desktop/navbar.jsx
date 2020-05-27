@@ -14,10 +14,6 @@ class NavBar extends Component {
     this.setState({
       selectedTab: tabId
     });
-    // let selectedTab = document.getElementsByClassName("selected-tab")[0];
-    // selectedTab.classList.remove("selected-tab");
-    // event.currentTarget.classList.add("selected-tab");
-    // console.log(event);
   }
 
   render() {
