@@ -174,3 +174,34 @@ a:link {
   font-size: 20px;
   text-align: center;
 }
+
+/* Desktop */
+.navbar-tabs {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.navbar-tablist {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 5vw;
+}
+
+.navbar-tab {
+  color: #e34234;
+  transition: background-color 0.25s ease;
+}
+
+.navbar-tab:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  transition: background-color 0.25s ease;
+}
+
+.selected-tab {
+  border-bottom: 1px solid red;
+}

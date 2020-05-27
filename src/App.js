@@ -7,11 +7,14 @@ import AboutUs from './components/about-us';
 import Modal from 'react-awesome-modal';
 import './App.css';
 
+// Desktop Imports
+import NavBar from "./components/desktop/navbar";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        isBottomDialogOpen: false,
+      isBottomDialogOpen: false,
     };
     this.openMobileMaps = this.openMobileMaps.bind(this);
   }
@@ -66,7 +69,8 @@ class App extends Component {
     return (
       <div className="App">
         <MediaQuery minDeviceWidth={1224}>
-          <div className="mobile-section-labels">Desktop site will be coming soon!</div>
+          <NavBar />
+          {/* <div className="mobile-section-labels">Desktop site will be coming soon!</div> */}
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
           <HeaderMobile />
