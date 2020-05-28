@@ -10,6 +10,8 @@ import './App.css';
 
 // Desktop Imports
 import NavBar from "./components/desktop/navbar";
+import GoogleMapReact from "google-map-react";
+import GoogleMap from "./components/google-map";
 
 class App extends Component {
   constructor(props) {
@@ -86,6 +88,7 @@ class App extends Component {
           {this.renderMobileContactDialog()}
           <img  alt="combo restaurant front" className="popout-image" src="http://res.cloudinary.com/ac31624/image/upload/c_scale,w_832/v1554845685/combo/combo_front_hd6mi2.jpg" />
         </MediaQuery>
+        <GoogleMap />
       </div>
     );
   }
