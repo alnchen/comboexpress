@@ -10,7 +10,6 @@ import './App.css';
 
 // Desktop Imports
 import NavBar from "./components/desktop/navbar";
-import GoogleMapReact from "google-map-react";
 import GoogleMap from "./components/google-map";
 
 class App extends Component {
