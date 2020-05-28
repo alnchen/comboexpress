@@ -10,6 +10,8 @@ import './App.css';
 
 // Desktop Imports
 import NavBar from "./components/desktop/navbar";
+import GoogleMapReact from "google-map-react";
+import GoogleMap from "./components/google-map";
 
 class App extends Component {
   constructor(props) {
@@ -72,11 +74,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MediaQuery minDeviceWidth={1224}>
+        <MediaQuery minDeviceWidth={1000}>
           <NavBar />
           {/* <div className="mobile-section-labels">Desktop site will be coming soon!</div> */}
         </MediaQuery>
-        <MediaQuery maxDeviceWidth={1224}>
+        <MediaQuery maxDeviceWidth={1000}>
           <HeaderMobile />
           <PhotoCarousel />
           <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
@@ -88,6 +90,7 @@ class App extends Component {
           <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>     
           {this.renderMobileContactDialog()}
         </MediaQuery>
+        <GoogleMap />
       </div>
     );
   }
