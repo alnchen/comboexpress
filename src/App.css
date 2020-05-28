@@ -7,6 +7,11 @@ body {
   background-color: #fafafa;
 }
 
+a:link {
+  color: #3b3a3a;
+  text-decoration: none;
+}
+
 .App {
   /* background-color: #fffef9; */
   /* background-color: black; */
@@ -17,8 +22,9 @@ body {
   padding: 10px 3vw 0px 3vw;
   display: flex;
   z-index: 999;
-  background-color: white;
+  background-color: #fafafa;
   height: 125px;
+  justify-content: space-between
 }
 
 .mobile-contact-trigger {
@@ -44,6 +50,14 @@ body {
   z-index: 1000;
 }
 
+.mobile-popout {
+  padding: 20px;
+  width: 80vw;
+  max-width: 400px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin: 0 auto; */
+}
 
 .mobile-popout-heading {
   font-size: 3vh;
@@ -63,10 +77,35 @@ body {
   padding: 10px 0;
 }
 
+.phone-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .mobile-popout-number {
-  padding-top: 35px;
-  font-size: 3vh;
+  font-size: 3.5vh;
   text-align: center;
+  background-color: #95eb71;
+  padding: 10px 20px;
+  border-radius: 10px;
+  /* display: inline; */
+  -webkit-box-shadow: 0 12px 6px -6px #a5a5a5;
+  -moz-box-shadow: 0 12px 6px -6px #a5a5a5;
+  box-shadow: 0 12px 6px -6px #a5a5a5;
+  /* margin: 0 auto; */
+  margin-bottom: 20px;
+}
+
+#phone-number {
+  color: white;
+}
+
+.mobile-popout-phone-icon {
+  position: relative;
+  top: 7px;
+  height: 4vh;
+  padding-right: 10px;
+  /* background-color: red; */
 }
 
 .popout-address {
@@ -77,6 +116,10 @@ body {
 
 .party-order-message {
   font-size: 2.5vh;
+}
+
+.mobile-modal {
+  width: 90vw;
 }
 
 .mobile-divider {
@@ -95,10 +138,13 @@ body {
 
 .mobile-logo-container {
   width: 34vw;
+  max-width: 150px;
+  padding-left: 1.5vw;
 }
 
 .mobile-logo {
   width: 100%;
+  /* max-width: 200px; */
 }
 
 .mobile-header-address {
@@ -136,23 +182,19 @@ body {
 
 /* Desktop */
 .navbar-tabs {
-  width: 100vw;
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.navbar-tablist {
   display: flex;
   justify-content: flex-end;
   list-style: none;
 }
 
-.navbar-tablist {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin-right: 5vw;
-  background-color: lightblue;
-}
-
 .navbar-tab {
-  background-color: lightgreen;
+  margin-right: 2vw;
   color: #e34234;
   transition: background-color 0.25s ease;
   /* border-right: 1px solid lightgray; */
@@ -163,7 +205,7 @@ body {
 
 .navbar-tab:hover {
   cursor: pointer;
-  background-color: lightgray;
+  border-bottom: 1px solid #F77262;
   transition: background-color 0.25s ease;
 }
 
@@ -288,4 +330,87 @@ body {
   100% {
     transform: translateY(0) rotate(-45deg);
   }
+  border-bottom: 2px solid #F77262;
+}
+
+.selected-tab:hover {
+  border-bottom: 2px solid #F77262;
+}
+
+.desktop-logo {
+  height: 90px;
+  padding: 5px;
+}
+
+.desktop-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 1vh;
+}
+
+.desktop-photo-carousel {
+  width: 75vw;
+  margin-bottom: 100px;
+}
+
+.desktop-header-spacer {
+  width: 33vw;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-logo-spacer {
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-header-address {
+  padding-left: 3vw;
+  justify-content: left;
+  width: 200px;
+  font-size: 18px;
+}
+
+.desktop-header-left {
+  text-align: center;
+}
+
+.desktop-header-tabs-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 33vw;
+}
+
+.desktop-tab-panels-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.covid-message {
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+.indent {
+  text-indent: 50px;
+}
+
+.side-margin {
+  margin: 0 18px;
+}
+
+.mobile-font {
+  font-size: 20px;
+}
+
+.padding-bottom-80 {
+  padding-bottom: 80px;
+}
+
+.desktop-party-orders-wrapper {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 70vw;
 }

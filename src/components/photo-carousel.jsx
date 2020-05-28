@@ -3,6 +3,7 @@ import ImageGallery from 'react-image-gallery';
 
 export default class PhotoCarousel extends Component {
   render() {
+    const { thumbnailPosition = 'bottom'} = this.props;
     const images = [
       {
         original: 'https://res.cloudinary.com/ac31624/image/upload/v1554845911/combo/combo_plate_3_u3uuvo.jpg',
@@ -42,6 +43,7 @@ export default class PhotoCarousel extends Component {
         slideInterval={10000}
         slideDuration={1000}
         showPlayButton={false}
+        thumbnailPosition={thumbnailPosition}
       />
     )
   }
