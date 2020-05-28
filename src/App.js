@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
 import HeaderMobile from './components/mobile/header-mobile';
-import PartyOrdersMobile from './components/mobile/party-orders-mobile';
+import PartyOrdersGallery from './components/party-orders-gallery';
 import PhotoCarousel from './components/photo-carousel';
+import CovidMessage from './components/covid-message';
 import AboutUs from './components/about-us';
 import Modal from 'react-awesome-modal';
 import './App.css';
@@ -68,19 +69,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MediaQuery minDeviceWidth={1224}>
+        <MediaQuery minDeviceWidth={800}>
           <NavBar />
-          {/* <div className="mobile-section-labels">Desktop site will be coming soon!</div> */}
         </MediaQuery>
-        <MediaQuery maxDeviceWidth={1224}>
+        <MediaQuery maxDeviceWidth={800}>
           <HeaderMobile />
+          <CovidMessage classes="side-margin mobile-font"/>
           <PhotoCarousel />
           <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
           <div className="">
             <AboutUs />
           </div>   
           <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
-          <PartyOrdersMobile />
+          <PartyOrdersGallery />
           <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>     
           {this.renderMobileContactDialog()}
           <img  alt="combo restaurant front" className="popout-image" src="http://res.cloudinary.com/ac31624/image/upload/c_scale,w_832/v1554845685/combo/combo_front_hd6mi2.jpg" />

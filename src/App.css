@@ -22,8 +22,9 @@ a:link {
   padding: 10px 3vw 0px 3vw;
   display: flex;
   z-index: 999;
-  background-color: white;
+  background-color: #fafafa;
   height: 125px;
+  justify-content: space-between
 }
 
 .mobile-contact-trigger {
@@ -52,6 +53,7 @@ a:link {
 .mobile-popout {
   padding: 20px;
   width: 80vw;
+  max-width: 400px;
   /* display: flex; */
   /* justify-content: center; */
   /* margin: 0 auto; */
@@ -136,10 +138,13 @@ a:link {
 
 .mobile-logo-container {
   width: 34vw;
+  max-width: 150px;
+  padding-left: 1.5vw;
 }
 
 .mobile-logo {
   width: 100%;
+  /* max-width: 200px; */
 }
 
 .mobile-header-address {
@@ -177,31 +182,111 @@ a:link {
 
 /* Desktop */
 .navbar-tabs {
-  width: 100vw;
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.navbar-tablist {
   display: flex;
   justify-content: flex-end;
   list-style: none;
 }
 
-.navbar-tablist {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin-right: 5vw;
-}
-
 .navbar-tab {
+  margin-right: 2vw;
   color: #e34234;
   transition: background-color 0.25s ease;
 }
 
 .navbar-tab:hover {
   cursor: pointer;
-  background-color: lightgray;
+  border-bottom: 1px solid #F77262;
   transition: background-color 0.25s ease;
 }
 
 .selected-tab {
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid #F77262;
+}
+
+.selected-tab:hover {
+  border-bottom: 2px solid #F77262;
+}
+
+.desktop-logo {
+  height: 90px;
+  padding: 5px;
+}
+
+.desktop-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 1vh;
+}
+
+.desktop-photo-carousel {
+  width: 75vw;
+  margin-bottom: 100px;
+}
+
+.desktop-header-spacer {
+  width: 33vw;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-logo-spacer {
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-header-address {
+  padding-left: 3vw;
+  justify-content: left;
+  width: 200px;
+  font-size: 18px;
+}
+
+.desktop-header-left {
+  text-align: center;
+}
+
+.desktop-header-tabs-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 33vw;
+}
+
+.desktop-tab-panels-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.covid-message {
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+.indent {
+  text-indent: 50px;
+}
+
+.side-margin {
+  margin: 0 18px;
+}
+
+.mobile-font {
+  font-size: 20px;
+}
+
+.padding-bottom-80 {
+  padding-bottom: 80px;
+}
+
+.desktop-party-orders-wrapper {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 70vw;
 }
