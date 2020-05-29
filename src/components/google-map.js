@@ -14,9 +14,10 @@ const GoogleMap = () => {
     };
   };
   return (
-    <div style={{ height: "50vh", width: "50%" }}>
+    <div style={{ height: "30vh", width: "50%" }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "key" }}
+        // bootstrapURLKeys={{ key: "AIzaSyARs7MP9R4j68TLlisXx1Re6VZwcq-rpNU" }}
+        bootstrapURLKeys={{ key: "use above line when done" }}
         defaultCenter={center}
         defaultZoom={zoom}
         options={getMapOptions}

@@ -72,6 +72,10 @@ class App extends Component {
       <div className="App">
         <MediaQuery minDeviceWidth={800}>
           <NavBar />
+          <div className="desktop-footer">
+            <GoogleMap />
+            <div>Hours of Operations</div>
+          </div>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={800}>
           <HeaderMobile />
@@ -87,7 +91,6 @@ class App extends Component {
           {this.renderMobileContactDialog()}
           <img  alt="combo restaurant front" className="popout-image" src="http://res.cloudinary.com/ac31624/image/upload/c_scale,w_832/v1554845685/combo/combo_front_hd6mi2.jpg" />
         </MediaQuery>
-        <GoogleMap />
       </div>
     );
   }

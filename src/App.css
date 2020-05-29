@@ -1,7 +1,7 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 body {
-  font-family: 'Baloo Bhai 2', cursive;
+  font-family: 'Baloo Bhai 2';
   font-size: 20px;
   color: #3b3a3a;
   background-color: #fafafa;
@@ -350,8 +350,9 @@ a:link {
 }
 
 .desktop-photo-carousel {
-  width: 75vw;
-  margin-bottom: 100px;
+  width: 75%;
+  padding-bottom: 100px;
+  margin: 0 auto;
 }
 
 .desktop-header-spacer {
@@ -413,4 +414,12 @@ a:link {
   display: flex;
   align-items: center;
   width: 70vw;
+}
+
+.desktop-footer {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  background-color: grey;
 }
