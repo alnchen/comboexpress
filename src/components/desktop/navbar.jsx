@@ -3,6 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PhotoCarousel from '../photo-carousel';
 import CovidMessage from '../covid-message';
 import PartyOrdersGallery from '../party-orders-gallery';
+import Menu from "./menu";
+
 class NavBar extends Component {
   constructor(props) {
     super(props);
@@ -59,9 +61,9 @@ class NavBar extends Component {
               <PhotoCarousel thumbnailPosition="left" />
             </div>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="menu">
             <h2>Menu</h2>
-            <div>Will be updated shortly!</div>
+            <Menu />
           </TabPanel>
           <TabPanel>
             <div className="desktop-party-orders-wrapper">

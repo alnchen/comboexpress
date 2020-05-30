@@ -185,6 +185,7 @@ a:link {
   display: flex;
   height: 100px;
   align-items: center;
+  width: 100%;
 }
 
 .navbar-tablist {
@@ -222,7 +223,6 @@ a:link {
   width: 75vh;
   text-align: center;
 }
-
 
 /* Google Map & Marker */
 
@@ -422,4 +422,68 @@ a:link {
   display: flex;
   flex-direction: row;
   background-color: grey;
+}
+
+/* Menu */
+.menu {
+  text-align: center;
+}
+
+.menu-select {
+  width: 75vw;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu-select {
+  padding: 0;
+}
+
+.menu-select > li {
+  text-align: center;
+  line-height: 15vh;
+  flex: 0 0 32%;
+  height: 15vh;
+  margin-bottom: 5%;
+  background-color: green;
+}
+
+.menu-select > li:nth-child(3n) {
+  background-color: red;
+}
+
+.menu-body {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-items {
+  width: 50vw;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted lightgray;
+}
+
+.menu-item > h6 {
+  margin: 1%;
+}
+
+.menu-item-name {
+  display: inline-flex;
+}
+
+.menu-pepper {
+  font-size: 12px;
+  vertical-align: middle;
+  padding-left: 5%;
 }
