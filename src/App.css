@@ -443,10 +443,10 @@ a:link {
 
 .menu-select > li {
   text-align: center;
-  line-height: 15vh;
+  line-height: 20vh;
   flex: 0 0 32%;
-  height: 15vh;
-  margin-bottom: 5%;
+  height: 20vh;
+  margin-bottom: 2%;
   background-color: green;
 }
 
