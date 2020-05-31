@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import {
+  HashRouter,
+  Switch,
+  Route,
+  Redirect,
+  Link
+} from "react-router-dom";
 import MediaQuery from 'react-responsive';
 import HeaderMobile from './components/mobile/header-mobile';
 import PartyOrdersGallery from './components/party-orders-gallery';
@@ -11,6 +18,7 @@ import './App.css';
 // Desktop Imports
 import NavBar from "./components/desktop/navbar";
 import GoogleMap from "./components/google-map";
+import Menu from "./components/desktop/menu";
 
 class App extends Component {
   constructor(props) {
@@ -69,29 +77,50 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <MediaQuery minDeviceWidth={800}>
-          <NavBar />
-          <div className="desktop-footer">
-            <GoogleMap />
-            <div>Hours of Operations</div>
-          </div>
-        </MediaQuery>
-        <MediaQuery maxDeviceWidth={800}>
-          <HeaderMobile />
-          <CovidMessage classes="side-margin mobile-font"/>
-          <PhotoCarousel />
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
-          <div className="">
-            <AboutUs />
-          </div>   
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
-          <PartyOrdersGallery />
-          <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>     
-          {this.renderMobileContactDialog()}
-          <img  alt="combo restaurant front" className="popout-image" src="http://res.cloudinary.com/ac31624/image/upload/c_scale,w_832/v1554845685/combo/combo_front_hd6mi2.jpg" />
-        </MediaQuery>
-      </div>
+      <HashRouter>
+
+        <div className="App">
+
+          {/* Desktop Components */}
+          <MediaQuery minDeviceWidth={800}>
+
+            <Route path="/" component={NavBar} />
+
+            <main>
+              <Switch>
+                <Route exact path="/about-us" component={AboutUs} />
+                <Route path="/menu/:category" component={Menu} />
+                <Route path="/menu" component={Menu} />
+              </Switch>
+            </main>
+
+            <div className="desktop-footer">
+              <Route path="/" component={GoogleMap} />
+
+              {/* Comment in when Hours of Operation component is created */}
+              {/* <Route path="/" component={HoursOfOp} /> */}
+            </div>
+
+          </MediaQuery>
+
+          {/* Mobile Components */}
+          <MediaQuery maxDeviceWidth={800}>
+            <HeaderMobile />
+            <CovidMessage classes="side-margin mobile-font"/>
+            <PhotoCarousel />
+            <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
+            <div className="">
+              <AboutUs />
+            </div>   
+            <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
+            <PartyOrdersGallery />
+            <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>     
+            {this.renderMobileContactDialog()}
+            <img  alt="combo restaurant front" className="popout-image" src="http://res.cloudinary.com/ac31624/image/upload/c_scale,w_832/v1554845685/combo/combo_front_hd6mi2.jpg" />
+          </MediaQuery>
+        </div>
+
+      </HashRouter>
     );
   }
 }

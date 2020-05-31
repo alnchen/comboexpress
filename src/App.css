@@ -190,7 +190,7 @@ a:link {
 
 .navbar-tablist {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   list-style: none;
 }
 
@@ -198,10 +198,8 @@ a:link {
   margin-right: 2vw;
   color: #e34234;
   transition: background-color 0.25s ease;
-  /* border-right: 1px solid lightgray; */
-  padding: 0% 2.5%;
-  margin-right: 2.5%;
   white-space: nowrap;
+  border-bottom: 1px solid transparent;
 }
 
 .navbar-tab:hover {
@@ -337,11 +335,7 @@ a:link {
   border-bottom: 2px solid #F77262;
 }
 
-.desktop-logo {
-  height: 90px;
-  padding: 5px;
-}
-
+/* Desktop Header */
 .desktop-header {
   display: flex;
   justify-content: space-between;
@@ -349,16 +343,26 @@ a:link {
   margin-top: 1vh;
 }
 
-.desktop-photo-carousel {
-  width: 75%;
-  padding-bottom: 100px;
-  margin: 0 auto;
-}
-
 .desktop-header-spacer {
   width: 33vw;
   display: flex;
+  text-align: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.desktop-header-address {
+  width: 100%;
+  font-size: 16px;
+  padding-top: 1vh;
+  padding-left: 3vw;
+  justify-content: left;
+}
+
+.desktop-header-phone {
+  width: 100%;
+  font-size: 16px;
+  padding-left: 1vw;
 }
 
 .desktop-logo-spacer {
@@ -366,21 +370,21 @@ a:link {
   justify-content: center;
 }
 
-.desktop-header-address {
-  padding-left: 3vw;
-  justify-content: left;
-  width: 200px;
-  font-size: 18px;
-}
-
-.desktop-header-left {
-  text-align: center;
+.desktop-logo {
+  height: 90px;
+  padding-top: 1vw;
 }
 
 .desktop-header-tabs-wrapper {
   display: flex;
   justify-content: flex-end;
   width: 33vw;
+}
+
+.desktop-photo-carousel {
+  width: 75%;
+  padding-bottom: 100px;
+  margin: 0 auto;
 }
 
 .desktop-tab-panels-wrapper {
@@ -431,6 +435,7 @@ a:link {
 
 .menu-select {
   width: 75vw;
+  margin: auto;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -462,6 +467,7 @@ a:link {
 }
 
 .menu-items {
+  margin: auto;
   width: 50vw;
   list-style: none;
   text-align: left;
