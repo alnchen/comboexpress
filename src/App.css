@@ -393,6 +393,8 @@ a:link {
 }
 
 .covid-message {
+  width: 75vw;
+  margin: auto;
   padding-bottom: 10px;
   font-size: 25px;
 }
