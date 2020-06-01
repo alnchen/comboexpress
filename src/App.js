@@ -88,7 +88,7 @@ class App extends Component {
 
             <main>
               <Switch>
-                <Route path="/" component={CovidMessage} />
+                <Route exact path="/" component={CovidMessage} />
                 <Route exact path="/about-us" component={AboutUs} />
                 <Route path="/menu/:category" component={Menu} />
                 <Route path="/menu" component={Menu} />
