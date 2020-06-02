@@ -36,8 +36,6 @@ export default class PhotoCarousel extends Component {
       <ImageGallery 
         id="carousel-overrides"
         items={images}
-        showThumbnails={true}
-        infinite={true}
         showFullscreenButton={false}
         autoPlay={true}
         slideInterval={10000}

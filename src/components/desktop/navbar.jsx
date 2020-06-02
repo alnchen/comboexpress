@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-// import PhotoCarousel from '../photo-carousel';
-// import CovidMessage from '../covid-message';
-// import PartyOrdersGallery from '../party-orders-gallery';
-// import Menu from "./menu";
+import { Tabs } from "react-tabs";
 
 class NavBar extends Component {
   constructor(props) {

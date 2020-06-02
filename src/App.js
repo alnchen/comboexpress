@@ -3,8 +3,6 @@ import {
   HashRouter,
   Switch,
   Route,
-  Redirect,
-  Link
 } from "react-router-dom";
 import MediaQuery from 'react-responsive';
 import HeaderMobile from './components/mobile/header-mobile';
@@ -15,10 +13,10 @@ import AboutUs from './components/about-us';
 import Modal from 'react-awesome-modal';
 import './App.css';
 
-// Desktop Imports
 import NavBar from "./components/desktop/navbar";
 import GoogleMap from "./components/google-map";
 import Menu from "./components/desktop/menu";
+import MobileMenu from "./components/mobile/mobile-menu";
 
 class App extends Component {
   constructor(props) {
@@ -121,7 +119,9 @@ class App extends Component {
             <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
             <div className="">
               <AboutUs />
-            </div>   
+            </div>
+            <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider" /></div>
+            <MobileMenu />
             <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>
             <PartyOrdersGallery />
             <div className="mobile-divider"><img className="mobile-divider-image" src="https://res.cloudinary.com/ac31624/image/upload/v1554081007/combo/chopsticks_rotated_b1ft0x.png" alt="chopsticks divider"/></div>     
