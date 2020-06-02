@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import PhotoCarousel from '../photo-carousel';
-import CovidMessage from '../covid-message';
-import PartyOrdersGallery from '../party-orders-gallery';
-import Menu from "./menu";
+// import PhotoCarousel from '../photo-carousel';
+// import CovidMessage from '../covid-message';
+// import PartyOrdersGallery from '../party-orders-gallery';
+// import Menu from "./menu";
 
 class NavBar extends Component {
   constructor(props) {
@@ -37,21 +37,25 @@ class NavBar extends Component {
               <a className="mobile-header-phone-number" href="tel:707-648-1066">707-648-1066</a>
             </div>
           </span>
-
-          <span className="desktop-logo-spacer">
-            <img className="desktop-logo" alt="combo logo" src="https://res.cloudinary.com/ac31624/image/upload/v1554084288/combo/ComboExpress_Logo_xcakhb.png"/>
-          </span>
+          <Link to={"/"}>
+            <span className="desktop-logo-spacer">
+              <img className="desktop-logo" alt="combo logo" src="https://res.cloudinary.com/ac31624/image/upload/v1554084288/combo/ComboExpress_Logo_xcakhb.png"/>
+            </span>
+            </Link>
 
           <span className="desktop-header-tabs-wrapper">
             <nav className="navbar-tabs">
               <hgroup className="navbar-tablist">
-                <Link to={"/about-us"} className="navbar-tab">
+              <Link to={"/"} className={`navbar-tab ${this.state.selectedTab === 0 ? "selected-tab" : ""}`} onClick={() => this.updateTab(0)}>
+                  Home
+                </Link>
+                <Link to={"/about-us"} className={`navbar-tab ${this.state.selectedTab === 1 ? "selected-tab" : ""}`} onClick={() => this.updateTab(1)}>
                   About Us
                 </Link>
-                <Link to={"/menu"} className="navbar-tab">
+                <Link to={"/menu"} className={`navbar-tab ${this.state.selectedTab === 2 ? "selected-tab" : ""}`} onClick={() => this.updateTab(2)}>
                   Menu
                 </Link>
-                <Link to={"/party-orders"} className="navbar-tab">
+                <Link to={"/party-orders"} className={`navbar-tab ${this.state.selectedTab === 3 ? "selected-tab" : ""}`} onClick={() => this.updateTab(3)}>
                   Party Orders
                 </Link>
               </hgroup>

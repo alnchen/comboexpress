@@ -22,10 +22,15 @@ class Menu extends Component {
     let capitalizeMatch = categoryMatch ? categoryMatch.split("-").map(word => capitalizeFirst(word)).join(" ") : "";
     let categoryItems = comboExpressMenu.getCategoryItems(capitalizeMatch);
     return capitalizeMatch ? (
-      <span className="menu">
+      <div className="menu">
         <h2>Menu</h2>
         <div className="menu-body">
           <ul className="menu-items">
+            <Link to={"/menu"}>
+              <li onClick={() => this.updateCategory("Appetizers")}>
+                {"<-- See all items"}
+              </li>
+            </Link>
             {
               categoryItems.map((categoryItem, idx) => {
                 let isSpicy = comboExpressMenu.getItemSpice(capitalizeMatch, categoryItem);
@@ -44,56 +49,56 @@ class Menu extends Component {
             }
           </ul>
         </div>
-      </span>
+      </div>
     ) : (
       <div className="menu">
         <h2>Menu</h2>
         <ul className="menu-select">
-          <li onClick={() => this.updateCategory("Appetizers")}>
-            <Link to={"/menu/appetizers"}>
+          <Link to={"/menu/appetizers"}>
+            <li onClick={() => this.updateCategory("Appetizers")}>
               Appetizers
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Soup")}>
-            <Link to={"/menu/soup"}>
+            </li>
+          </Link>
+          <Link to={"/menu/soup"}>
+            <li onClick={() => this.updateCategory("Soup")}>
               Soup
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Seafood")}>
-            <Link to={"/menu/seafood"}>
+            </li>
+          </Link>
+          <Link to={"/menu/seafood"}>
+            <li onClick={() => this.updateCategory("Seafood")}>
               Seafood
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Meat")}>
-            <Link to={"/menu/meat"}>
+            </li>
+          </Link>
+          <Link to={"/menu/meat"}>
+            <li onClick={() => this.updateCategory("Meat")}>
               Meat
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Vegetables")}>
-            <Link to={"/menu/vegetables"}>
+            </li>
+          </Link>
+          <Link to={"/menu/vegetables"}>
+            <li onClick={() => this.updateCategory("Vegetables")}>
               Vegetables
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Noodles")}>
-            <Link to={"/menu/noodles"}>
+            </li>
+          </Link>
+          <Link to={"/menu/noodles"}>
+            <li onClick={() => this.updateCategory("Noodles")}>
               Noodles
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Chow Mein")}>
-            <Link to={"/menu/chow-mein"}>
+            </li>
+          </Link>
+          <Link to={"/menu/chow-mein"}>
+            <li onClick={() => this.updateCategory("Chow Mein")}>
               Chow Mein
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Chow Fun")}>
-            <Link to={"/menu/chow-fun"}>
+            </li>
+          </Link>
+          <Link to={"/menu/chow-fun"}>
+            <li onClick={() => this.updateCategory("Chow Fun")}>
               Chow Fun
-            </Link>
-          </li>
-          <li onClick={() => this.updateCategory("Rice")}>
-            <Link to={"/menu/rice"}>
+            </li>
+          </Link>
+          <Link to={"/menu/rice"}>
+            <li onClick={() => this.updateCategory("Rice")}>
               Rice
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
     );

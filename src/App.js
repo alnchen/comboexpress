@@ -76,6 +76,14 @@ class App extends Component {
   }
 
   render() {
+    const Home = () => (
+      <>
+        <CovidMessage />
+        <div className="desktop-photo-carousel">
+          <PhotoCarousel thumbnailPosition={"left"}/>
+        </div>
+      </>
+    )
     return (
       <HashRouter>
 
@@ -88,10 +96,11 @@ class App extends Component {
 
             <main>
               <Switch>
-                <Route exact path="/" component={CovidMessage} />
+                <Route exact path="/" component={Home} />
                 <Route exact path="/about-us" component={AboutUs} />
                 <Route path="/menu/:category" component={Menu} />
                 <Route path="/menu" component={Menu} />
+                <Route exact path="/party-orders" component={PartyOrdersGallery} />
               </Switch>
             </main>
 

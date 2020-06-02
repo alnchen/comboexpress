@@ -202,14 +202,14 @@ a:link {
   border-bottom: 1px solid transparent;
 }
 
-.navbar-tab:hover {
+.navbar-tab:hover:not(.selected-tab) {
   cursor: pointer;
   border-bottom: 1px solid #F77262;
   transition: background-color 0.25s ease;
 }
 
 .selected-tab {
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid #F77262;
 }
 
 .tab-about-us > h2 {
@@ -433,6 +433,8 @@ a:link {
 /* Menu */
 .menu {
   text-align: center;
+  padding-bottom: 30px;
+  min-height: 70vh;
 }
 
 .menu-select {
@@ -448,17 +450,21 @@ a:link {
   padding: 0;
 }
 
-.menu-select > li {
+.menu-select > * {
   text-align: center;
   line-height: 20vh;
   flex: 0 0 32%;
   height: 20vh;
   margin-bottom: 2%;
-  background-color: green;
+  background-color: #ed6d5f;
+}
+
+.menu-select a {
+  color: white;
 }
 
 .menu-select > li:nth-child(3n) {
-  background-color: red;
+  background-color: #ed6d5f;
 }
 
 .menu-body {
@@ -469,6 +475,7 @@ a:link {
 }
 
 .menu-items {
+  font-size: 28px;
   margin: auto;
   width: 50vw;
   list-style: none;
