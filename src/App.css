@@ -383,8 +383,14 @@ a:link {
 
 .desktop-photo-carousel {
   width: 75%;
-  padding-bottom: 100px;
-  margin: 0 auto;
+  /* padding-bottom: 100px; */
+  margin: 0 auto 100px auto;
+}
+
+.image-gallery-image {
+  background-color: black;
+  max-height: 10px;
+  width: 500px;
 }
 
 .desktop-tab-panels-wrapper {
@@ -404,7 +410,7 @@ a:link {
 }
 
 .side-margin {
-  margin: 0 18px;
+  margin: auto;
 }
 
 .mobile-font {
@@ -499,6 +505,34 @@ a:link {
 
 .menu-pepper {
   font-size: 12px;
+  vertical-align: middle;
+  padding-left: 5%;
+}
+
+.mobile-menu-category {
+  padding: 0;
+  font-size: 10px;
+  text-align: center;
+}
+
+.mobile-menu-item {
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+  margin: auto;
+  text-align: left;
+  list-style: none;
+  font-size: 12px;
+  border-bottom: 1px dotted lightgray;
+}
+
+.mobile-menu-item > h6 {
+  margin: 1vh;
+  display: inline-flex;
+}
+
+.mobile-menu-pepper {
+  font-size: 6px;
   vertical-align: middle;
   padding-left: 5%;
 }

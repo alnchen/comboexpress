@@ -7,6 +7,10 @@ class Menu {
     this.menu[itemCategory] = {};
   }
 
+  getAllCategories() {
+    return Object.keys(this.menu);
+  }
+
   hasCategory(itemCategory) {
     return this.menu[itemCategory] !== undefined;
   }
