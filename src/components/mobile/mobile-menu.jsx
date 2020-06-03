@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import comboExpressMenu from "../menu-object";
 
 class MobileMenu extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     var collapsibleButtons = document.getElementsByClassName("collapsible-button");
     for (let idx = 0; idx < collapsibleButtons.length; idx++) {
@@ -16,6 +12,11 @@ class MobileMenu extends Component {
           content.style.display = "none";
         } else {
           content.style.display = "block";
+        }
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
         }
       });
     }
@@ -29,9 +30,9 @@ class MobileMenu extends Component {
           categories.map((category, idx) => {
             let categoryItems = comboExpressMenu.getCategoryItems(category);
             return (
-              <div className="mobile-menu">
+              <div className="mobile-menu" key={`mobile-menu-category-${idx}`}>
                 <button className="collapsible-button">{category}</button>
-                <ul className="mobile-menu-category collapsible-content" key={`mobile-menu-category-${idx}`}>
+                <ul className="mobile-menu-category collapsible-content">
                   {
                     categoryItems.map((categoryItem, jdx) => {
                       let isSpicy = comboExpressMenu.getItemSpice(category, categoryItem);

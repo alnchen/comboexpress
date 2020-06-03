@@ -516,14 +516,26 @@ a:link {
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: center;
+  text-align: left;
   outline: none;
   font-size: 15px;
   font-weight: 700;
 }
 
+.collapsible-button:after {
+  content: "\02795";
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
 .active, .collapsible-button:hover {
   background-color: #ccc;
+}
+
+.active:after {
+  content: "\2796";
 }
 
 .collapsible-content {
@@ -531,6 +543,8 @@ a:link {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
 }
 
 .mobile-menu:first-child {
