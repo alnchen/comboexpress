@@ -44,7 +44,7 @@ class App extends Component {
           <div className='mobile-contact-trigger' onClick={ () => 
             this.setState({ isBottomDialogOpen: true }) 
           }>
-            <div className='mobile-contract-trigger-text'>
+            <div className='mobile-contact-trigger-text'>
               <div>Order</div>
               <div>Now</div>
             </div>
