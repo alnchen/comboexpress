@@ -7,12 +7,11 @@ class NavBar extends Component {
     super(props);
     this.updateTab = this.updateTab.bind(this);
     this.state = {
-      selectedTab: this.props.location.pathname === "/menu" ? "Menu" : this.props.match.params.category || "Home"
+      selectedTab: this.props.location.pathname === "/menu" ? "Menu" : (
+        this.props.location.pathname === "/about-us" ? "About Us" : (
+          this.props.location.pathname === "/party-orders" ? "Party Orders" : "Home")
+        )
     };
-  }
-
-  componentDidMount() {
-    console.log(this.props);
   }
 
   updateTab(tabName) {
