@@ -33,11 +33,12 @@ class NavBar extends Component {
               <a className="mobile-header-phone-number" href="tel:707-648-1066">707-648-1066</a>
             </div>
           </span>
-          <Link to={"/"}>
-            <span className="desktop-logo-spacer">
+
+          <span className="desktop-logo-spacer">
+            <Link to={"/"}>
               <img className="desktop-logo" alt="combo logo" src="https://res.cloudinary.com/ac31624/image/upload/v1554084288/combo/ComboExpress_Logo_xcakhb.png"/>
-            </span>
             </Link>
+          </span>
 
           <span className="desktop-header-tabs-wrapper">
             <nav className="navbar-tabs">
@@ -59,25 +60,6 @@ class NavBar extends Component {
           </span>
 
         </div>
-
-
-        {/* <div className="desktop-tab-panels-wrapper">
-          <TabPanel>
-            <div className="desktop-photo-carousel">
-              <CovidMessage classes="padding-bottom-80"/>
-              <PhotoCarousel thumbnailPosition="left" />
-            </div>
-          </TabPanel>
-          <TabPanel className="menu">
-            <h2>Menu</h2>
-            <Menu />
-          </TabPanel>
-          <TabPanel>
-            <div className="desktop-party-orders-wrapper">
-              <PartyOrdersGallery />
-            </div>
-          </TabPanel>
-        </div> */}
       </Tabs>
     );
   }
