@@ -168,6 +168,12 @@ a:link {
   min-height: 70vh;
 }
 
+.menu > h2 {
+  font-weight: 100;
+  font-size: 26px;
+  text-align: center;
+}
+
 .menu-select {
   width: 75vw;
   padding: 0;
