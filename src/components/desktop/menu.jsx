@@ -35,7 +35,7 @@ class Menu extends Component {
               categoryItems.map((categoryItem, idx) => {
                 let isSpicy = comboExpressMenu.getItemSpice(capitalizeMatch, categoryItem);
                 let isSpicyItem = isSpicy ? (
-                  <strong className="mobile-menu-pepper">&#127798;</strong>
+                  <strong className="menu-pepper">&#127798;</strong>
                 ) : null;
                 return (
                   <li className="menu-item" key={`menu-item-${idx}`}>
