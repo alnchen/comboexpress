@@ -6,7 +6,7 @@ class MobileMenu extends Component {
     var collapsibleButtons = document.getElementsByClassName("collapsible-button");
     for (let idx = 0; idx < collapsibleButtons.length; idx++) {
       collapsibleButtons[idx].addEventListener("click", function() {
-        this.classList.toggle("active");
+        this.classList.toggle("menu-active");
         let content = this.nextElementSibling;
         if (content.style.display === "block") {
           content.style.display = "none";
@@ -26,6 +26,7 @@ class MobileMenu extends Component {
     let categories = comboExpressMenu.getAllCategories();
     return (
       <span className="mobile-menu-wrapper">
+        <div className="mobile-menu-title">Menu</div>
         {
           categories.map((category, idx) => {
             let categoryItems = comboExpressMenu.getCategoryItems(category);

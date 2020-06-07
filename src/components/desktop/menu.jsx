@@ -25,12 +25,17 @@ class Menu extends Component {
       <div className="menu">
         <h2>Menu</h2>
         <div className="menu-body">
-          <ul className="menu-items">
-            <Link to={"/menu"}>
-              <li onClick={() => this.updateCategory("Appetizers")}>
-                {"<-- See all items"}
-              </li>
+          <Link to={"/menu"}>
+            {/* <span onClick={() => this.updateCategory("Appetizers")} className="menu-back-button"> */}
+              <img 
+                alt="back-button"
+                src="https://res.cloudinary.com/ac31624/image/upload/c_scale,w_120/v1591515124/combo/back-button.png"
+                onClick={() => this.updateCategory("Appetizers")}
+                className="menu-back-button"
+              />
+            {/* </span> */}
             </Link>
+          <div className="menu-items">
             {
               categoryItems.map((categoryItem, idx) => {
                 let isSpicy = comboExpressMenu.getItemSpice(capitalizeMatch, categoryItem);
@@ -47,7 +52,7 @@ class Menu extends Component {
                 );
               })
             }
-          </ul>
+          </div>
         </div>
       </div>
     ) : (

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ImageGallery from 'react-image-gallery';
 
-export default class PartyOrdersMobile extends Component {
+export default class PartyOrdersGallery extends Component {
   render() {
     const images = [
       {
@@ -36,7 +36,7 @@ export default class PartyOrdersMobile extends Component {
 // image gallery: https://www.npmjs.com/package/react-image-gallery
 
     return (
-      <>
+      <div className="party-orders">
         <div className="mobile-section-labels">Party Orders</div>
         <ImageGallery 
           id="carousel-overrides"
@@ -78,7 +78,7 @@ export default class PartyOrdersMobile extends Component {
             <div className="legend" id="carousel-caption"><div className="carousel-caption-text">Spareribs</div></div>
           </div>
         </ImageGallery>
-      </>
+      </div>
     )
   }
 }

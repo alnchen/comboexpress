@@ -11,6 +11,10 @@ body {
   background-color: #fafafa;
 }
 
+.mobile-body {
+  margin-bottom: 90px;
+}
+
 a:link {
   color: #3b3a3a;
   text-decoration: none;
@@ -150,8 +154,31 @@ a:link {
 
 .about-us {
   padding: 0px 40px;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
+  /* padding-bottom: 50px; */
+  /* margin-bottom: 50px; */
+}
+
+.about-us-image {
+  /* width: 40vw; */
+  margin: 0 auto;
+}
+
+.about-us-body {
+  display: flex;
+  flex-direction: row;
+  /* width: 50vw; */
+  margin: 0 auto;
+}
+
+.about-us-body-desktop {
+  width: 70vw;
+  max-width: 1000px;
+}
+
+.about-us-desktop {
+  width: 80%;
 }
 
 /* ************************ */
@@ -166,6 +193,15 @@ a:link {
   text-align: center;
   padding-bottom: 30px;
   min-height: 70vh;
+}
+
+.menu-back-button {
+  /* background-color: red; */
+  width: 50px;
+  /* width: 30px; */
+  display: flex;
+  justify-content: right;
+  padding-right: 10px;
 }
 
 .menu > h2 {
@@ -203,15 +239,15 @@ a:link {
 
 .menu-body {
   margin: auto;
-  width: 100%;
+  /* width: 75vw; */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .menu-items {
   font-size: 28px;
-  margin: auto;
-  width: 50vw;
+  /* margin: auto; */
+  /* width: 50vw; */
   list-style: none;
   text-align: left;
   padding: 0;
@@ -221,6 +257,7 @@ a:link {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px dotted lightgray;
+  width: 50vw;
 }
 
 .menu-item > h6 {
@@ -250,7 +287,7 @@ a:link {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .pin {
@@ -343,6 +380,33 @@ a:link {
     transform: translateY(0) rotate(-45deg);
   }
   border-bottom: 2px solid #F77262;
+}
+
+.hours-of-operations {
+  /* padding: 0 10px; */
+  padding-bottom: 3vw;
+}
+
+.desktop-hours {
+  padding-left: 3vw;
+  max-width: 500px;
+  width: 50%;
+}
+
+.mobile-hours {
+  padding: 0 7vw 30px 7vw;
+}
+
+.hours-of-operations-title {
+  font-size: 130%;
+  text-align: center;
+}
+
+.day-hours-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* **************************** */
@@ -459,19 +523,20 @@ a:link {
   margin-left: 5px;
 }
 
-.active, .collapsible-button:hover {
+.menu-active, .collapsible-button:hover {
   background-color: #ccc;
 }
 
-.active:after {
+.menu-active:after {
   content: "\2796";
+  /* ^ leaves a hyphen in the gallery */
 }
 
 .collapsible-content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   max-height: 0;
   transition: max-height 0.2s ease-in-out;
 }
@@ -498,7 +563,7 @@ a:link {
   margin: auto;
   text-align: left;
   list-style: none;
-  font-size: 12px;
+  font-size: 24px;
   border-bottom: 1px dotted lightgray;
 }
 
@@ -511,6 +576,12 @@ a:link {
   font-size: 6px;
   vertical-align: middle;
   padding-left: 5%;
+}
+
+.mobile-menu-title {
+  font-size: 130%;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 /* ******************* */
@@ -592,4 +663,17 @@ a:link {
 
 /* ********************** */
 /*  End Contact (Mobile)  */
+/* ********************** */
+
+/* ********************** */
+/* Start Contact (Mobile) */
+/* ********************** */
+
+.party-orders {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* ********************** */
+/*  Party Orders  */
 /* ********************** */
