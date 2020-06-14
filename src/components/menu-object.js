@@ -62,8 +62,8 @@ const comboExpressMenu = new Menu();
 
 // Appetizers
 comboExpressMenu.addItem("Appetizers", "Egg Roll", 2.15, false, 1);
-comboExpressMenu.addItem("Appetizers", "Fried Wonton", 5.25, false, 12);
-comboExpressMenu.addItem("Appetizers", "Pot Sticker", 7.15, false, 6);
+comboExpressMenu.addItem("Appetizers", "Fried Wonton (12)", 5.25, false, 12);
+comboExpressMenu.addItem("Appetizers", "Pot Sticker (6)", 7.15, false, 6);
 
 // Soup
 comboExpressMenu.addItem("Soup", "Egg Flower Soup", 7.25, false, 1);
