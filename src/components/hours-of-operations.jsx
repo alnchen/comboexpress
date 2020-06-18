@@ -62,7 +62,7 @@ export default class HoursOfOp extends Component {
 
     return (
     <div className={`hours-of-operations ${desktop ? 'desktop-hours' : 'mobile-hours'}`}>
-        <div className="hours-of-operations-title">Temporary </div>
+        <div className="hours-of-operations-title">Our Temporary </div>
         <div className="hours-of-operations-title">Hours of Operations</div>
         <div>
             {renderSchedule()}
