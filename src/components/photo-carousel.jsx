@@ -17,10 +17,10 @@ export default class PhotoCarousel extends Component {
         original: 'https://res.cloudinary.com/ac31624/image/upload/v1554790464/combo/egg_rolls_nxdv96.jpg',
         thumbnail: 'https://res.cloudinary.com/ac31624/image/upload/v1554790464/combo/egg_rolls_nxdv96.jpg'
       },
-      {
-        original: 'https://res.cloudinary.com/ac31624/image/upload/v1554790463/combo/potsticker1_julqgk.jpg',
-        thumbnail: 'https://res.cloudinary.com/ac31624/image/upload/v1554790463/combo/potsticker1_julqgk.jpg'
-      },
+      // {
+      //   original: 'https://res.cloudinary.com/ac31624/image/upload/v1554790463/combo/potsticker1_julqgk.jpg',
+      //   thumbnail: 'https://res.cloudinary.com/ac31624/image/upload/v1554790463/combo/potsticker1_julqgk.jpg'
+      // },
       {
         original: 'https://res.cloudinary.com/ac31624/image/upload/v1554790467/combo/combo_plate_1_kdefwv.jpg',
         thumbnail: 'https://res.cloudinary.com/ac31624/image/upload/v1554790467/combo/combo_plate_1_kdefwv.jpg'

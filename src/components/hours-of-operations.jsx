@@ -7,43 +7,43 @@ export default class HoursOfOp extends Component {
         {
             dayName: "Monday",
             start: '11:30 am',
-            end: '8:30 pm',
+            end: '7:30 pm',
             closed: false
         },
         {
             dayName: "Tuesday",
             start: '11:30 am',
-            end: '8:30 pm',
+            end: '7:30 pm',
             closed: false
         },
         {
             dayName: "Wednesday",
             start: '11:30 am',
-            end: '8:30 pm',
+            end: '7:30 pm',
             closed: false
         },
         {
             dayName: "Thursday",
             start: '11:30 am',
-            end: '8:30 pm',
+            end: '7:30 pm',
             closed: false
         },
         {
             dayName: "Friday",
             start: '11:30 am',
-            end: '8:30 pm',
+            end: '7:30 pm',
             closed: false
         },
         {
             dayName: "Saturday",
             start: '11:30 am',
-            end: '8:30 pm',
+            end: '7:30 pm',
             closed: false
         },
         {
             dayName: "Sunday",
             start: '11:00 am',
-            end: '8:30 pm',
+            end: '7:30 pm',
             closed: true
         }
     ]
@@ -62,6 +62,7 @@ export default class HoursOfOp extends Component {
 
     return (
     <div className={`hours-of-operations ${desktop ? 'desktop-hours' : 'mobile-hours'}`}>
+        <div className="hours-of-operations-title">Temporary </div>
         <div className="hours-of-operations-title">Hours of Operations</div>
         <div>
             {renderSchedule()}
